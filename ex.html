@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Girlfriend Day My Love</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ff6b8a, #ff8fab, #ffacc7, #ffc9d3);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Floating Hearts Animation */
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .heart:nth-child(3) { left: 30%; animation-delay: 2s; }
+        .heart:nth-child(4) { left: 40%; animation-delay: 3s; }
+        .heart:nth-child(5) { left: 50%; animation-delay: 4s; }
+        .heart:nth-child(6) { left: 60%; animation-delay: 5s; }
+        .heart:nth-child(7) { left: 70%; animation-delay: 0.5s; }
+        .heart:nth-child(8) { left: 80%; animation-delay: 1.5s; }
+        .heart:nth-child(9) { left: 90%; animation-delay: 2.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) scale(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) scale(1); }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 20px;
+            position: relative;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #ff6b8a, #ff8fab, #ffacc7, #ffc9d3);
+            border-radius: 30px;
+            z-index: -1;
+            filter: blur(15px);
+            opacity: 0.7;
+        }
+
+        .title {
+            font-size: 3.5em;
+            color: #d63384;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .subtitle {
+            font-size: 1.8em;
+            color: #e91e63;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .message {
+            font-size: 1.3em;
+            color: #495057;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .highlight {
+            color: #d63384;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .rose-container {
+            margin: 30px 0;
+            font-size: 4em;
+            animation: sway 3s ease-in-out infinite;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        .love-note {
+            background: linear-gradient(135deg, #ffe6f0, #fff0f5);
+            border-left: 5px solid #e91e63;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+            font-style: italic;
+            font-size: 1.2em;
+            color: #6c757d;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .date {
+            background: #d63384;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 5px 15px rgba(214, 51, 132, 0.3);
+        }
+
+        .sparkle {
+            animation: sparkle 1.5s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+        }
+
+        .button {
+            background: linear-gradient(135deg, #e91e63, #d63384);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.4);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 1.4em;
+            color: #d63384;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 30px 20px; }
+            .title { font-size: 2.5em; }
+            .subtitle { font-size: 1.4em; }
+            .message { font-size: 1.1em; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts -->
+    <div class="heart">💖</div>
+    <div class="heart">💕</div>
+    <div class="heart">💗</div>
+    <div class="heart">💖</div>
+    <div class="heart">💕</div>
+    <div class="heart">💗</div>
+    <div class="heart">💖</div>
+    <div class="heart">💕</div>
+    <div class="heart">💗</div>
+
+    <div class="container">
+        <h1 class="title">Happy Girlfriend Day!</h1>
+        
+        <div class="date">August 1st, 2025</div>
+        
+        <h2 class="subtitle">To My Beautiful Girlfriend <span class="sparkle">✨</span></h2>
+        
+        <div class="rose-container">🌹</div>
+        
+        <div class="message">
+            Today is <span class="highlight">National Girlfriend Day</span>, and I want you to know that you are the most 
+            <span class="highlight">amazing, beautiful, and wonderful</span> person in my life. 
+            Every day with you feels like a celebration, but today is officially yours!
+        </div>
+        
+        <div class="love-note">
+            "You're not just my girlfriend, you're my best friend, my inspiration, and my greatest blessing. 
+            Thank you for making every moment more beautiful just by being you."
+        </div>
+        
+        <div class="message">
+            You make my world brighter with your smile, my days happier with your laughter, 
+            and my life complete with your love. I'm so grateful to have you by my side.
+        </div>
+        
+        <button class="button" onclick="showSurprise()">Click for a Special Message 💕</button>
+        
+        <div class="footer">
+            I Love You More Than Words Can Say! 💖
+        </div>
+    </div>
+
+    <script>
+        function showSurprise() {
+            alert("You are my sunshine, my only sunshine! You make me happy when skies are gray! 🌞💕\n\nI love you to the moon and back! 🌙⭐");
+            
+            // Create more hearts
+            for(let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    createHeart();
+                }, i * 100);
+            }
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '💖';
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '100vh';
+            heart.style.fontSize = '30px';
+            heart.style.zIndex = '1000';
+            heart.style.pointerEvents = 'none';
+            heart.style.animation = 'float 3s ease-out forwards';
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                document.body.removeChild(heart);
+            }, 3000);
+        }
+
+        // Auto-create hearts periodically
+        setInterval(() => {
+            if(Math.random() > 0.7) {
+                createHeart();
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
